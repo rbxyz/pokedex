@@ -1,0 +1,274 @@
+.pokemons {
+    display: grid;
+    grid-template-columns: 1fr;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pokemon {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+    padding: .6rem;
+    border-radius: 1rem;
+    background-color: #49d0b0;
+    color: #fff;
+}
+
+.pokemon li {
+    margin: .5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    height: 125px;
+    color: #ffff;
+    background-color: #14A06F;
+}
+
+.pokemon .detail img {
+    max-width: 100%;
+    width: 80px;
+    height: 90px;
+}
+
+.pokemon .detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pokemon .detail .types {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.pokemon .detail .types .type {
+    background-color: #61e1ca;
+    color: #fff;
+    padding: .25rem .5rem;
+    font-size: .625rem;
+    margin: .25rem 0;
+    border-radius: 1rem;
+    height: 1rem;
+}
+
+.pokemon .number {
+    color: black;
+    opacity: .3;
+    text-align: right;
+    font-size: .825rem;
+}
+
+.pokemon .name {
+    color: #fff;
+    margin: .25rem 0;
+}
+
+.pokemon .types {
+    padding: 0;
+    margin: 0;
+    list-style: 9;
+}
+
+/* Textos */
+.text-primary {
+    color: red;
+}
+
+/* Margens */
+.ml-15 {
+    margin-left: 15px;
+}
+
+/* Imagens */
+.spearow-img {
+    background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/16.svg");
+    background-repeat: no-repeat;
+    background-size: 150px;
+    background-position: center center;
+}
+
+.caterpie-img {
+    background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/10.svg");
+    background-repeat: no-repeat;
+    background-size: 150px;
+    background-position: center center;
+}
+
+.squirtle-img {
+    background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/7.svg");
+    background-repeat: no-repeat;
+    background-size: 150px;
+    background-position: center center;
+}
+
+.charmander-img {
+    background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg");
+    background-repeat: no-repeat;
+    background-size: 150px;
+    background-position: center center;
+}
+
+.bulbasaur-img {
+    background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg");
+    background-repeat: no-repeat;
+    background-size: 150px;
+    background-position: center center;
+}
+
+.shiny-img {
+    background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/35.svg");
+    background-repeat: no-repeat;
+    background-size: 150px;
+    background-position: center center;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 992px) {
+    .content {
+        max-width: 992px;
+        margin: 0 auto;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 380px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.filters-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #f6f8fc;
+    border-radius: 0.5rem;
+}
+
+.search-container {
+    flex: 1;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: "Alan Sans", sans-serif;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #49d0b0;
+}
+
+.filter-container {
+    flex: 1;
+}
+
+.type-filter {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: "Alan Sans", sans-serif;
+    background-color: #fff;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.type-filter:focus {
+    outline: none;
+    border-color: #49d0b0;
+}
+
+/* Paginação */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.pagination-button {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #49d0b0;
+    border-radius: 0.5rem;
+    background-color: #49d0b0;
+    color: #fff;
+    font-size: 1rem;
+    font-family: "Alan Sans", sans-serif;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.pagination-button:hover:not(:disabled) {
+    background-color: #3ab89a;
+    border-color: #3ab89a;
+    transform: translateY(-2px);
+}
+
+.pagination-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.page-info {
+    font-size: 1rem;
+    font-family: "Alan Sans", sans-serif;
+    color: #333;
+    font-weight: 500;
+}
+
+.loading,
+.no-results {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    font-family: "Alan Sans", sans-serif;
+    color: #666;
+    list-style: none;
+}
+
+.loading {
+    color: #49d0b0;
+}
+
+@media screen and (min-width: 576px) {
+    .filters-container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .search-container,
+    .filter-container {
+        flex: 1;
+    }
+}

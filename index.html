@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Pokedex</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/pokedex.css"
+    />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Normalize.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="ml-15 alan-sans">
+      <section class="content">
+        <h1 class="text-primary">Pokedex</h1>
+        
+        <div class="filters-container">
+          <div class="search-container">
+            <input 
+              type="text" 
+              id="searchInput" 
+              class="search-input" 
+              placeholder="Buscar por nome..."
+            />
+          </div>
+          
+          <div class="filter-container">
+            <select id="typeFilter" class="type-filter">
+              <option value="">Todos os tipos</option>
+            </select>
+          </div>
+        </div>
+
+        <ol id="pokemonList" class="pokemons">
+          <!-- pokemons h-->
+        </ol>
+
+        <div class="pagination-container">
+          <button id="prevButton" class="pagination-button" disabled>Anterior</button>
+          <span id="pageInfo" class="page-info">Página 1</span>
+          <button id="nextButton" class="pagination-button">Próxima</button>
+        </div>
+      </section>
+    </div>
+  </body>
+
+  <script src="js/index/poke-api.js"></script>
+  <script src="js/index/index.js"></script>
+</html>
